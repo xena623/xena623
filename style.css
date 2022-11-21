@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=DotGothic16&family=Fredoka:wght@500&family=Open+Sans&display=swap');
+body{
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.content{
+    position:relative;
+    overflow: hidden;
+    opacity: 0%;
+    margin-right: -540px;
+    margin-top: -360px;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    background-color: #FAFAFA;
+    animation: contentpop 1s ease-out 2s forwards;
+}
+@keyframes textchange {
+    0%{
+    opacity:0%;
+    }
+
+    100%{
+    opacity:100%;
+    }
+}
+.right h1{
+    color:#000000;
+    font-family: Cinzel;
+}
+.right p{
+    color:#0d38ce;
+    font-family: DotGothic16;
+}
+.right .highlights{
+    color: black;
+    font-weight: bold;
+}
+.right a{
+    color: black;
+}
+.header{
+    width: 500px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 0px 30px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    transform: translateY(-100px);
+    animation: headerdown 2s ease-out 0.5s forwards;
+}
+.header #blue{
+    color: #0d38ce;
+}
+.header  header{
+    font-family: Fredoka;
+    font-size: 30px;
+}
+.content .imgbtn{
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 240px;
+    border-radius: 30%;
+}
+.content .imgbtn2{
+    position: absolute;
+    left: 20px;
+    opacity: 0%;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 240px;
+    border-radius: 30%;
+}
+.imgbtn2:hover{
+    opacity: 100%;
+    cursor: pointer
+}
+.imgbtn:hover{
+    opacity: 0%;
+    cursor: pointer;
+}
+.original{
+    display: inline
+}
+.original:hover{
+    display: none;
+}
+@keyframes contentpop {
+    0% {
+    opacity: 0%;
+    }
+
+    100% {
+    opacity: 100%;
+    }
+}
+@keyframes headerdown {
+    0% {
+    transform: translateY(-100px);
+    }
+
+    100% {
+    transform: translateY(0px);
+    }
+}
